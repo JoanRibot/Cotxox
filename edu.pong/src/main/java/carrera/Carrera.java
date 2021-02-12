@@ -1,23 +1,25 @@
 package carrera;
 
 public class Carrera {
-    String tarjetaCreditoUsuario;
+    String tarjetaCredito;
     String origen;
     String destino;
+    double distancia;
     int tiempoEsperado;
     int tiempoCarrera;
-    double distancia;
+    double costeTotal;
+    int propina;
     //Conductor conductor;
 
-    public Carrera(String tarjetaCreditoUsuario) {
-        this.tarjetaCreditoUsuario = tarjetaCreditoUsuario;
+    public Carrera(String tarjetaCredito) {
+        this.tarjetaCredito = tarjetaCredito;
         //this.conductor = conductor;
 
     }
 
 
-	public String gettarjetaCreditoUsuario(){
-        return this.tarjetaCreditoUsuario;
+	public String getTarjetaCredito(){
+        return this.tarjetaCredito;
     }
 
     public void setOrigen(String lugarOrigen){
@@ -28,19 +30,30 @@ public class Carrera {
         return origen;
     }
     
-    public String getDestino() {
-        return destino;
-    }
-
     public void setDestino(String destino) {
         this.destino = destino;
     }
 
+    public String getDestino() {
+        return destino;
+    }
+
+    public double getDistancia() {
+        return distancia;
+    }
+
+    public void setDistancia(double distancia) {
+        this.distancia = distancia;
+    }
+
+    public double getCosteEsperado(){
+        return costeTotal;
+    }
 
     public int getTiempoEsperado() {
         return tiempoEsperado;
     }
-
+    
     public void setTiempoEsperado(int tiempoEsperado) {
         this.tiempoEsperado = tiempoEsperado;
     }
@@ -52,15 +65,6 @@ public class Carrera {
     public void setTiempoCarrera(int tiempoCarrera) {
         this.tiempoCarrera = tiempoCarrera;
     }
-
-    public double getDistancia() {
-        return distancia;
-    }
-
-    public void setDistancia(double distancia) {
-        this.distancia = distancia;
-    }
-
-
-
+    
+    
 }

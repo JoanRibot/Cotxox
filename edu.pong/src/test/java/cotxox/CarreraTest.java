@@ -35,12 +35,12 @@ public class CarreraTest {
 
     @Test
     public void tarjetaCreditoUsuarioTest(){
-        assertEquals("8172517829129571", carrera1.gettarjetaCreditoUsuario());
-        assertEquals("5164572545647435", carrera2.gettarjetaCreditoUsuario());
-        assertEquals("9472828303742033", carrera3.gettarjetaCreditoUsuario());
-        assertEquals("9387727638952032", carrera4.gettarjetaCreditoUsuario());
-        assertEquals("0293462038342772", carrera5.gettarjetaCreditoUsuario());
-        assertEquals("9767589234582934", carrera6.gettarjetaCreditoUsuario());
+        assertEquals("8172517829129571", carrera1.getTarjetaCredito());
+        assertEquals("5164572545647435", carrera2.getTarjetaCredito());
+        assertEquals("9472828303742033", carrera3.getTarjetaCredito());
+        assertEquals("9387727638952032", carrera4.getTarjetaCredito());
+        assertEquals("0293462038342772", carrera5.getTarjetaCredito());
+        assertEquals("9767589234582934", carrera6.getTarjetaCredito());
     }
 
     @Test
