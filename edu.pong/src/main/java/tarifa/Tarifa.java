@@ -19,8 +19,8 @@ public class Tarifa {
         double conteSinComision = getCosteDistancia(carrera.getDistancia()) + getCosteTiempo(carrera.getTiempoCarrera());
         double comisionPorcentaje = (double)this.comision / 100;
         double costeTotal = conteSinComision + conteSinComision * comisionPorcentaje;
-        if (costeTotal < costeMinimo){
-            return costeMinimo;
+        if (costeTotal < this.costeMinimo){
+            return this.costeMinimo;
         }
         else {
             return costeTotal;

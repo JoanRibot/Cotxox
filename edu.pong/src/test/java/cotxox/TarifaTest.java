@@ -2,7 +2,6 @@ package cotxox;
 
 import static org.junit.Assert.assertEquals;
 
-import java.security.PublicKey;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -23,6 +22,7 @@ public class TarifaTest {
     @Before
     public void objectsTest(){
         this.tarifa = new Tarifa();
+        
         this.carrera1 = new Carrera("8172517829129571");
         this.carrera2 = new Carrera("5164572545647435");
         this.carrera3 = new Carrera("9472828303742033");
@@ -44,8 +44,6 @@ public class TarifaTest {
         carrera5.setTiempoCarrera(30);
         carrera6.setTiempoCarrera(50);
 
-
-
     }
 
 
@@ -57,9 +55,8 @@ public class TarifaTest {
         assertEquals(16.2d, tarifa.getCosteDistancia(carrera4.getDistancia()), 0.001);
         assertEquals(44.55d, tarifa.getCosteDistancia(carrera5.getDistancia()), 0.001);
         assertEquals(118.8d, tarifa.getCosteDistancia(carrera6.getDistancia()), 0.001);
-
-
 }
+
     @Test
     public void getCosteTiempoTest(){
         assertEquals(0.35d, tarifa.getCosteTiempo(carrera1.getTiempoCarrera()), 0.001);
