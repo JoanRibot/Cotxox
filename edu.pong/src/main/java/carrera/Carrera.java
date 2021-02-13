@@ -1,19 +1,25 @@
 package carrera;
 
+import java.util.Optional;
+
+import conductores.Conductor;
+import conductores.PoolConductores;
+import tarifa.Tarifa;
+
 public class Carrera {
     String tarjetaCredito;
     String origen;
     String destino;
-    double distancia;
-    int tiempoEsperado;
-    int tiempoCarrera;
-    double costeTotal;
-    int propina;
-    //Conductor conductor;
+    double distancia = 0;
+    int tiempoEsperado = 0;
+    int tiempoCarrera = 0;
+    double costeTotal = 0d;
+    int propina = 0;
+
+    private Optional<Conductor> conductor;
 
     public Carrera(String tarjetaCredito) {
         this.tarjetaCredito = tarjetaCredito;
-        //this.conductor = conductor;
 
     }
 
@@ -47,7 +53,7 @@ public class Carrera {
     }
 
     public double getCosteEsperado(){
-        return costeTotal;
+        return Tarifa.getCosteTotal(this);
     }
 
     public int getTiempoEsperado() {
@@ -65,6 +71,32 @@ public class Carrera {
     public void setTiempoCarrera(int tiempoCarrera) {
         this.tiempoCarrera = tiempoCarrera;
     }
-    
-    
+
+    public int getPropina() {
+        return propina;
+    }
+
+    public void recibirPropina(int propina) {
+        this.propina = propina;
+    }
+
+    public Optional<Conductor> getConductor() {
+        return conductor;
+    }
+
+    public void asignarConductor(PoolConductores conductores){
+        this.conductor = conductores.asignarConductor();
+    }
+
+    public double getCosteTotal(){
+        return getCosteEsperado() + getPropina();
+    }
+
+    public void realizarPago(double pago) {
+		this.costeTotal = pago;
+	}
+
+    public void liberarConductor(){
+        this.conductor.get().setOcupado(false);
+    }
 }
