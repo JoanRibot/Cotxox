@@ -3,24 +3,24 @@ package tarifa;
 import carrera.Carrera;
 
 public class Tarifa {
-    final double costeTarifa = 1.35;
-    final double costeMinuto = 0.35;
-    final double costeMinimo = 5;
-    final byte comision = 20;
+    final static double costeTarifa = 1.35;
+    final static double costeMinuto = 0.35;
+    final static double costeMinimo = 5;
+    final static byte comision = 20;
 
-    public double getCosteDistancia(double distancia){
-        return this.costeTarifa * distancia;
+    public static double getCosteDistancia(double distancia){
+        return costeTarifa * distancia;
     }
 
-    public double getCosteTiempo(int minutos){
-        return this.costeMinuto * minutos;
+    public static double getCosteTiempo(int minutos){
+        return costeMinuto * minutos;
     }
-    public double getCosteTotal(Carrera carrera){
+    public static double getCosteTotal(Carrera carrera){
         double conteSinComision = getCosteDistancia(carrera.getDistancia()) + getCosteTiempo(carrera.getTiempoCarrera());
-        double comisionPorcentaje = (double)this.comision / 100;
+        double comisionPorcentaje = (double)comision / 100;
         double costeTotal = conteSinComision + conteSinComision * comisionPorcentaje;
-        if (costeTotal < this.costeMinimo){
-            return this.costeMinimo;
+        if (costeTotal < costeMinimo){
+            return costeMinimo;
         }
         else {
             return costeTotal;

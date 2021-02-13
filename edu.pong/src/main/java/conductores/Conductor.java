@@ -34,7 +34,7 @@ public class Conductor {
         this.matricula = matricula;
     }
 
-    public double getValoracionMedia() {
+    public double getValoracion() {
         if(this.valoraciones.size()==0){
             return 0;
         }
@@ -48,7 +48,7 @@ public class Conductor {
 
     public void setValoracion(byte valoracion) {
         this.valoraciones.add(valoracion);
-        this.valoracionMedia = getValoracionMedia();
+        this.valoracionMedia = getValoracion();
     }
 
     public boolean isOcupado() {

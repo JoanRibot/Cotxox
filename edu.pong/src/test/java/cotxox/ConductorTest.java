@@ -49,13 +49,13 @@ public class ConductorTest {
 
     @Test
     public void valoracionTest(){
-        assertEquals(0d, conductor1.getValoracionMedia(), 0.001);
+        assertEquals(0d, conductor1.getValoracion(), 0.001);
         conductor2.setValoracion((byte) 4);
-        assertEquals(4d, conductor2.getValoracionMedia(), 0.001);
+        assertEquals(4d, conductor2.getValoracion(), 0.001);
         conductor3.setValoracion((byte) 5);
         conductor3.setValoracion((byte) 2);
         conductor3.setValoracion((byte) 3);
-        assertEquals(3.33333333d, conductor3.getValoracionMedia(), 0.001);
+        assertEquals(3.33333333d, conductor3.getValoracion(), 0.001);
 
     }
 

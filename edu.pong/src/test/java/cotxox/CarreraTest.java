@@ -25,6 +25,46 @@ public class CarreraTest {
         this.carrera5 = new Carrera("0293462038342772");
         this.carrera6 = new Carrera("9767589234582934");
 
+        carrera1.setOrigen("Marratxi");
+        carrera2.setOrigen("Arta");
+        carrera3.setOrigen("Valldemossa");
+        carrera4.setOrigen("Cala Millor");
+        carrera5.setOrigen("Palma");
+        carrera6.setOrigen("Llucmajor");
+
+        carrera1.setDestino("Llucmajor");
+        carrera2.setDestino("Palma");
+        carrera3.setDestino("Cala Millor");
+        carrera4.setDestino("Valldemossa");
+        carrera5.setDestino("Arta");
+        carrera6.setDestino("Marratxi");
+
+        carrera1.setTiempoEsperado(42);
+        carrera2.setTiempoEsperado(2);
+        carrera3.setTiempoEsperado(89);
+        carrera4.setTiempoEsperado(76);
+        carrera5.setTiempoEsperado(11);
+        carrera6.setTiempoEsperado(908);
+
+        carrera1.setTiempoCarrera(1);
+        carrera2.setTiempoCarrera(4);
+        carrera3.setTiempoCarrera(10);
+        carrera4.setTiempoCarrera(14);
+        carrera5.setTiempoCarrera(30);
+        carrera6.setTiempoCarrera(50);
+
+        carrera1.setDistancia(1);
+        carrera2.setDistancia(2);
+        carrera3.setDistancia(6);
+        carrera4.setDistancia(12);
+        carrera5.setDistancia(33);
+        carrera6.setDistancia(88);
+
+        carrera1.recibirPropina(3);
+        carrera2.recibirPropina(4);
+        carrera3.recibirPropina(5);
+        carrera4.recibirPropina(8);
+
 
      }
 
@@ -45,78 +85,48 @@ public class CarreraTest {
 
     @Test
     public void origenTest(){
-        carrera1.setOrigen("Marratxi");
         assertEquals("Marratxi", carrera1.getOrigen());
-        carrera2.setOrigen("Arta");
         assertEquals("Arta", carrera2.getOrigen());
-        carrera3.setOrigen("Valldemossa");
         assertEquals("Valldemossa", carrera3.getOrigen());
-        carrera4.setOrigen("Cala Millor");
         assertEquals("Cala Millor", carrera4.getOrigen());
-        carrera5.setOrigen("Palma");
         assertEquals("Palma", carrera5.getOrigen());
-        carrera6.setOrigen("Llucmajor");
         assertEquals("Llucmajor", carrera6.getOrigen());
     }
 
     public void destinoTest(){
-        carrera1.setDestino("Llucmajor");
         assertEquals("Llucmajor", carrera1.getDestino());
-        carrera2.setDestino("Palma");
         assertEquals("Palma", carrera2.getDestino());
-        carrera3.setDestino("Cala Millor");
         assertEquals("Cala Millor", carrera3.getDestino());
-        carrera4.setDestino("Valldemossa");
         assertEquals("Valldemossa", carrera4.getDestino());
-        carrera5.setDestino("Arta");
         assertEquals("Arta", carrera5.getDestino());
-        carrera6.setDestino("Marratxi");
         assertEquals("Marratxi", carrera6.getDestino());
     }
 
 
     public void tiempoEsperadoTest(){
-        carrera1.setTiempoEsperado(42);
         assertEquals(42, carrera1.getTiempoEsperado());
-        carrera2.setTiempoEsperado(2);
         assertEquals(2, carrera2.getTiempoEsperado());
-        carrera3.setTiempoEsperado(89);
         assertEquals(89, carrera3.getTiempoEsperado());
-        carrera4.setTiempoEsperado(76);
         assertEquals(76, carrera4.getTiempoEsperado());
-        carrera5.setTiempoEsperado(11);
         assertEquals(11, carrera5.getTiempoEsperado());
-        carrera6.setTiempoEsperado(908);
         assertEquals(908, carrera6.getTiempoEsperado());
     }
 
     public void tiempoCarreraTest(){
-        carrera1.setTiempoEsperado(42);
-        assertEquals(42, carrera1.getTiempoCarrera());
-        carrera2.setTiempoEsperado(2);
-        assertEquals(2, carrera2.getTiempoCarrera());
-        carrera3.setTiempoEsperado(89);
-        assertEquals(89, carrera3.getTiempoCarrera());
-        carrera4.setTiempoEsperado(76);
-        assertEquals(76, carrera4.getTiempoCarrera());
-        carrera5.setTiempoEsperado(11);
-        assertEquals(11, carrera5.getTiempoCarrera());
-        carrera6.setTiempoEsperado(908);
-        assertEquals(908, carrera6.getTiempoCarrera());
+        assertEquals(1, carrera1.getTiempoCarrera());
+        assertEquals(4, carrera2.getTiempoCarrera());
+        assertEquals(10, carrera3.getTiempoCarrera());
+        assertEquals(14, carrera4.getTiempoCarrera());
+        assertEquals(30, carrera5.getTiempoCarrera());
+        assertEquals(50, carrera6.getTiempoCarrera());
     }
-    public void distancia(double d){
-        carrera1.setDistancia(42);
-        assertEquals(42d, carrera1.getDistancia(),0.001);
-        carrera2.setDistancia(2.5);
-        assertEquals(2.5d, carrera2.getTiempoCarrera(),0.001);
-        carrera3.setDistancia(53.3);
-        assertEquals(53.3d, carrera3.getDistancia(),0.001);
-        carrera4.setDistancia(60.9);
-        assertEquals(60.9d, carrera4.getDistancia(),0.001);
-        carrera5.setDistancia(11);
-        assertEquals(11d, carrera5.getDistancia(),0.001);
-        carrera6.setDistancia(88.9);
-        assertEquals(88.9d, carrera6.getDistancia(),0.001);
+    public void distancia(){
+        assertEquals(1.0d, carrera1.getDistancia(), 0.001);
+        assertEquals(2.0d, carrera2.getTiempoCarrera(), 0.001);
+        assertEquals(6.0d, carrera3.getDistancia(), 0.001);
+        assertEquals(12.0d, carrera4.getDistancia(), 0.001);
+        assertEquals(33.0d, carrera5.getDistancia(), 0.001);
+        assertEquals(88.0d, carrera6.getDistancia(), 0.001);
     }
     
 }
