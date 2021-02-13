@@ -106,17 +106,17 @@ public class CarreraTest {
     }
     public void distancia(double d){
         carrera1.setDistancia(42);
-        assertEquals(42d, carrera1.getDistancia());
+        assertEquals(42d, carrera1.getDistancia(),0.001);
         carrera2.setDistancia(2.5);
-        assertEquals(2.5d, carrera2.getTiempoCarrera());
+        assertEquals(2.5d, carrera2.getTiempoCarrera(),0.001);
         carrera3.setDistancia(53.3);
-        assertEquals(53.3d, carrera3.getDistancia());
+        assertEquals(53.3d, carrera3.getDistancia(),0.001);
         carrera4.setDistancia(60.9);
-        assertEquals(60.9d, carrera4.getDistancia());
+        assertEquals(60.9d, carrera4.getDistancia(),0.001);
         carrera5.setDistancia(11);
-        assertEquals(11d, carrera5.getDistancia());
+        assertEquals(11d, carrera5.getDistancia(),0.001);
         carrera6.setDistancia(88.9);
-        assertEquals(88.9d, carrera6.getDistancia());
+        assertEquals(88.9d, carrera6.getDistancia(),0.001);
     }
     
 }
